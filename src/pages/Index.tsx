@@ -1,8 +1,8 @@
-
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { Calendar, Car, Users, TrendingUp, MapPin, Clock, DollarSign, Settings, Bell, Search } from "lucide-react";
+import { Calendar, Car, Users, TrendingUp, MapPin, Clock, DollarSign, Settings, Bell, Search, LogIn } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Index = () => {
   const stats = [
@@ -99,6 +99,12 @@ const Index = () => {
               </div>
             </div>
             <div className="flex items-center space-x-4">
+              <Link to="/login">
+                <Button variant="outline" size="sm" className="flex items-center space-x-2">
+                  <LogIn className="h-4 w-4" />
+                  <span>Login</span>
+                </Button>
+              </Link>
               <Button variant="ghost" size="icon" className="relative">
                 <Bell className="h-5 w-5" />
                 <span className="absolute -top-1 -right-1 h-4 w-4 bg-red-500 rounded-full text-xs text-white flex items-center justify-center">
